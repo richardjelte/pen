@@ -45,10 +45,13 @@
   .pen {
     margin-top: 50px;
   }
-  .pen-menu {
+  .show-pen {
     display: block !important;
-    position: absolute;
-    top: 145px;
+  }
+  .pen-menu {
+    position: absolute !important;
+    top: 145px !important;
+    left: 540px !important;
   }
   </style>
   <link rel="stylesheet" href="src/pen.css" />
@@ -141,12 +144,14 @@
   $('.send').hide();
   $('#announcement').hide();
   createAnnouncement = function(){
+  $('.pen-menu').addClass('show-pen');
   $('#announcement').show();
   $('.new').hide();
   $('.send').show();
 }
 
 sendAnnouncement = function(){
+  $('.pen-menu').removeClass('show-pen');
   $('#announcement').hide();
   $('.new').show();
   $('.send').hide();
